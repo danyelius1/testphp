@@ -1,9 +1,13 @@
 <?php
 
-if (isset($_POST["ok"])){
-    echo $_POST["vardas"];
-    echo $_POST["pavarde"];
-    echo $_POST["elpastas"];
-    echo $_POST["password"];
-}
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "soc_tinklas";
 
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
