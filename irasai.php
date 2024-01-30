@@ -2,7 +2,24 @@
 
 include "connection.php";
 
+if (isset($_POST["ok"])){
 
+
+    $pav = $_POST["pav"];
+    $text = $_POST["text"];
+    $data = date("Y-m-d, H:i:s");
+
+    $sql = "INSERT INTO irasai (pavadinimas, tekstas, data) values ('$pav', '$text', '$data')";
+
+
+    if (mysqli_query($conn, $sql)) {
+        Header("Location: form.php");
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
+}
 ?>
 
 <!doctype html>
@@ -16,10 +33,15 @@ include "connection.php";
 </head>
 <body>
 
-<form>
-    <input type="text" id="pav" name="pav" value="pavadinimas" required>
-    <textarea name="text" id="text" cols="30" rows="10" required>textas</textarea>
-</form>
+
+
+<div class="irasai">
+    <form method="post" action="irasai.php">
+        <input type="text" id="pav" name="pav" value="pavadinimas" required>
+        <textarea name="text" id="text" cols="30" rows="10" required>textas</textarea>
+        <input type="submit" name="ok" id="ok" value="ok">
+    </form>
+</div>
 
 </body>
 </html>
