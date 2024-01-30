@@ -18,8 +18,7 @@ include "connection.php";
 
 <form>
     <input type="text" id="pav" name="pav" value="pavadinimas" required>
-
-    <textarea name="text" id="text" cols="30" rows="10">textas</textarea>
+    <textarea name="text" id="text" cols="30" rows="10" required>textas</textarea>
 
 </form>
 
