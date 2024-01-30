@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
+body {
 
+}
+
+.forma {
+    margin: 50px auto;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    background: linear-gradient(56deg, rgba(102,26,87,1) 29%, rgba(0,44,255,1) 49%, rgba(56,255,0,1) 77%);
+    color: white;
+    box-shadow: -14px 19px 77px 4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -14px 19px 77px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -14px 19px 77px 4px rgba(0,0,0,0.75);
+
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #cccccc;
+    padding: 12px 0;
+}
