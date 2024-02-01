@@ -2,7 +2,7 @@
 
 if (isset($_POST["ok"])) {
 
-    include "connection.php";
+    include "includes/connection.php";
 
     $vardas = $_POST["vardas"];
     $pavarde = $_POST["pavarde"];
@@ -13,7 +13,7 @@ if (isset($_POST["ok"])) {
     $sql = "INSERT INTO vartotojai (vardas, pavarde, el_pastas, password) VALUES ('$vardas', '$pavarde', '$el_pastas', '$hash_pass')";
 
     if (mysqli_query($conn, $sql)) {
-        Header("Location: form.php");
+        Header("Location: home.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

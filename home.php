@@ -13,7 +13,7 @@ if (isset($_POST["ok"])){
 
 
     if (mysqli_query($conn, $sql)) {
-        Header("Location: form.php");
+        Header("Location: register.html");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -30,13 +30,12 @@ if (isset($_POST["ok"])){
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
-
-
 <div class="irasai">
-    <form method="post" action="irasai.php">
+    <form method="post" action="home.php">
         <input type="text" id="pav" name="pav" value="pavadinimas" required>
         <textarea name="text" id="text" cols="30" rows="10" required>textas</textarea>
         <input type="submit" name="ok" id="ok" value="ok">
