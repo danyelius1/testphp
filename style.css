@@ -1,0 +1,24 @@
+.pirmas {
+    width: 30px;
+    background-color: red;
+}
+
+.antras {
+    width: 30px;
+    background-color:  red;
+}
+
+.trecias {
+    width: 30px;
+    background-color: red;
+}
+
+.ketvirtas {
+    width: 30px;
+    background-color: red;
+}
+
+.main {
+    display: flex;
+    width: 35px;
+}
